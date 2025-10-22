@@ -1,0 +1,20 @@
+# Simple Render service config (example)
+services:
+  - type: web
+    name: 224-server
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: ""
+    startCommand: "node server/index.js"
+    repo: https://github.com/your/repo
+    branch: main
+    envVars:
+      - key: PAYMOB_API_KEY
+        value: ""
+      - key: PAYMOB_INTEGRATION_ID
+        value: ""
+      - key: PAYMOB_IFRAME_ID
+        value: ""
+      - key: USE_PAYMOB
+        value: "false"
